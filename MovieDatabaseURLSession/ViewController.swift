@@ -39,6 +39,8 @@ class ViewController: UIViewController {
         
         configureTableView()
         
+        tableView.reloadData()
+        
     }
     
     func configureTableView() {
@@ -129,6 +131,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return view.frame.height / 12
     }
+    
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         
         cell.imageView?.clipsToBounds = true
